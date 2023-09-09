@@ -54,14 +54,14 @@ for i in ['B', 'C', 'D', 'E', 'F']:
                             wl = week.split('-')
                             start_w = wl[0]
                             end_w = wl[1]
-                            cl = [w for w in range(int(start_w), int(end_w) + 1) if w // 2 != w / 2]
+                            cl = [w for w in range(int(start_w), int(end_w) + 1) if w % 2 == 1]
 
                         elif '双' in week:
                             week = week.replace('双', '')
                             wl = week.split('-')
                             start_w = wl[0]
                             end_w = wl[1]
-                            cl = [w for w in range(int(start_w), int(end_w) + 1) if w // 2 == w / 2]
+                            cl = [w for w in range(int(start_w), int(end_w) + 1) if w % 2 == 0]
                         else:
                             wl = week.split('-')
                             start_w = wl[0]
